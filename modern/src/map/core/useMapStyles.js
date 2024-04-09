@@ -155,6 +155,16 @@ export default () => {
       attribute: 'bingMapsKey',
     },
     {
+      id: 'bingOrdnanceSurvey',
+      title: t('mapBingOrdnanceSurvey'),
+      style: styleCustom({
+        tiles: [0, 1, 2, 3].map((i) => `https://ecn.t${i}.tiles.virtualearth.net/tiles/r{quadkey}?g=14374&lbl=l1&productSet=mmOS`),
+        maxZoom: 21
+      }),
+      available: !!bingMapsKey,
+      attribute: 'bingMapsKey',
+    },
+    {
       id: 'tomTomBasic',
       title: t('mapTomTomBasic'),
       style: `https://api.tomtom.com/map/1/style/20.0.0-8/basic_main.json?key=${tomTomKey}`,
